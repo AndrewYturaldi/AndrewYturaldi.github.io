@@ -1,0 +1,243 @@
+* {
+    font-family: monospace;
+}
+
+body {
+    background-color: lightcyan;
+    overflow-y: auto;
+}
+
+h1 {
+    text-align: center;
+    font-family: papyrus, Georgia;
+    font-style: bold;
+    font-size: 300%;
+    color: black;
+}
+
+.zia-background {
+	width: 600px;
+	height: 400px;
+	background-color: #FFD700;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+}
+
+#zia-ring {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #BF0A30;
+    border-radius: 50%;
+    top: 50%;
+}
+
+#zia-top-line-one {
+    position: absolute;
+    top: 30%;
+    left: 46%;
+    border-left: 7px solid #BF0A30;
+    border-radius: 10px;
+    height: 58px;
+}
+
+#zia-top-line-two {
+    position: absolute;
+    top: 26%;
+    left: 48.2%;
+    border-left: 7px solid #BF0A30;
+    border-radius: 10px;
+    height: 68px;
+}
+
+#zia-top-line-three {
+    position: absolute;
+    top: 26%;
+    left: 50.4%;
+    border-left: 7px solid #BF0A30;
+    border-radius: 10px;
+    height: 68px;
+}
+
+#zia-top-line-four {
+    position: absolute;
+    top: 30%;
+    left: 52.6%;
+    border-left: 7px solid #BF0A30;
+    border-radius: 10px;
+    height: 58px;
+}
+
+#zia-bottom-line-one {
+    position: absolute;
+    top: 55.6%;
+    left: 46%;
+    border-left: 7px solid #BF0A30;
+    border-radius: 10px;
+    height: 58px;
+}
+
+#zia-bottom-line-two {
+    position: absolute;
+    top: 57%;
+    left: 48.2%;
+    border-left: 7px solid #BF0A30;
+    border-radius: 10px;
+    height: 68px;
+}
+
+#zia-bottom-line-three {
+    position: absolute;
+    top: 57%;
+    left: 50.4%;
+    border-left: 7px solid #BF0A30;
+    border-radius: 10px;
+    height: 68px;
+}
+
+#zia-bottom-line-four {
+    position: absolute;
+    top: 55.6%;
+    left: 52.6%;
+    border-left: 7px solid #BF0A30;
+    border-radius: 10px;
+    height: 58px;
+}
+
+#zia-left-line-one {
+    position: absolute;
+    top: 54%;
+    left: 36.65%;
+    border-top: 7px solid #BF0A30;
+    border-radius: 10px;
+    width: 58px;
+}
+
+
+#zia-left-line-two {
+    position: absolute;
+    top: 50.8%;
+    left: 34%;
+    border-top: 7px solid #BF0A30;
+    border-radius: 10px;
+    width: 68px;
+}
+
+#zia-left-line-three {
+    position: absolute;
+    top: 47.3%;
+    left: 34%;
+    border-top: 7px solid #BF0A30;
+    border-radius: 10px;
+    width: 68px;
+}
+
+#zia-left-line-four {
+    position: absolute;
+    top: 44%;
+    left: 36.65%;
+    border-top: 7px solid #BF0A30;
+    border-radius: 10px;
+    width: 58px;
+}
+
+#zia-right-line-one {
+    position: absolute;
+    top: 54%;
+    left: 53.75%;
+    border-top: 7px solid #BF0A30;
+    border-radius: 10px;
+    width: 58px;
+}
+
+
+#zia-right-line-two {
+    position: absolute;
+    top: 50.8%;
+    left: 54.7%;
+    border-top: 7px solid #BF0A30;
+    border-radius: 10px;
+    width: 68px;
+}
+
+#zia-right-line-three {
+    position: absolute;
+    top: 47.3%;
+    left: 54.7%;
+    border-top: 7px solid #BF0A30;
+    border-radius: 10px;
+    width: 68px;
+}
+
+#zia-right-line-four {
+    position: absolute;
+    top: 44%;
+    left: 53.75%;
+    border-top: 7px solid #BF0A30;
+    border-radius: 10px;
+    width: 58px;
+}
+
+.ring-center {
+    width: 40px;
+    height: 40px;
+    border: 10px solid #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#BackgroundColorButton {
+    margin-right: 20px;
+}
+
+#ZiaColorButton, #BackgroundColorButton {
+    width: 20%;
+    height: 5%;
+    font-size: 100%;
+    font-style: bold;
+    background-color: mediumturquoise
+}
+
+#ZiaColorButton:active, #BackgroundColorButton:active {
+    background-color: orange;
+}
+
+#BackgroundColorWords, #ZiaColorWords {
+   white-space: nowrap;
+}
+
+#BackgroundColorDiv,
+#ZiaColorDiv {
+  width: 600px;
+  margin-top: 20px;
+}
+
+form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 88%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+
+
+
+
+
+
+
