@@ -5,65 +5,66 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="styles.css"/>
-	</head>
-	<body>
-            <h1>Zia Customizer</h1>
-	  <div class="zia-background">
-              <div id="zia-ring" class="zia-color"></div>
-              <div id="zia-top-line-one" class="zia-color"></div>
-              <div id="zia-top-line-two" class="zia-color"></div>
-              <div id="zia-top-line-three" class="zia-color"></div>
-              <div id="zia-top-line-four" class="zia-color"></div>
-              <div id="zia-bottom-line-one" class="zia-color"></div>
-              <div id="zia-bottom-line-two" class="zia-color"></div>
-              <div id="zia-bottom-line-three" class="zia-color"></div>
-              <div id="zia-bottom-line-four" class="zia-color"></div>
-              <div id="zia-left-line-one" class="zia-color"></div>
-              <div id="zia-left-line-two" class="zia-color"></div>
-              <div id="zia-left-line-three" class="zia-color"></div>
-              <div id="zia-left-line-four" class="zia-color"></div>
-              <div id="zia-right-line-one" class="zia-color"></div>
-              <div id="zia-right-line-two" class="zia-color"></div>
-              <div id="zia-right-line-three" class="zia-color"></div>
-              <div id="zia-right-line-four" class="zia-color"></div>
-	  </div>
+      <link rel="icon" href="zia_favicon.jpg">
+	</head>  
+    <body>
+      <div id="wrapper">
+        <header>
+          <h1>Zia Customizer</h1>
+        </header> 
+        <div class="zia-background">
+            <div id="zia-ring" class="zia-color"></div>
+            <div id="zia-top-line-one" class="zia-color"></div>
+            <div id="zia-top-line-two" class="zia-color"></div>
+            <div id="zia-top-line-three" class="zia-color"></div>
+            <div id="zia-top-line-four" class="zia-color"></div>
+            <div id="zia-bottom-line-one" class="zia-color"></div>
+            <div id="zia-bottom-line-two" class="zia-color"></div>
+            <div id="zia-bottom-line-three" class="zia-color"></div>
+            <div id="zia-bottom-line-four" class="zia-color"></div>
+            <div id="zia-left-line-one" class="zia-color"></div>
+            <div id="zia-left-line-two" class="zia-color"></div>
+            <div id="zia-left-line-three" class="zia-color"></div>
+            <div id="zia-left-line-four" class="zia-color"></div>
+            <div id="zia-right-line-one" class="zia-color"></div>
+            <div id="zia-right-line-two" class="zia-color"></div>
+            <div id="zia-right-line-three" class="zia-color"></div>
+            <div id="zia-right-line-four" class="zia-color"></div>
             <div class="ring-center"></div>
-            <form>
-                <div id="BackgroundColorDiv">
-                    <label for="BackgroundColorField" id="BackgroundColorWords">Background Color:</label> 
-                    <input type="color" name="background_color" placeholder="Enter a color" id="BackgroundColorField" value="#FFD700">
-                    <button id="BackgroundColorButton">Apply</button>
-                </div>
-                <div id="ZiaColorDiv">
-                    <label for="ZiaColorField" id="ZiaColorWords">Zia Color:</label> 
-                    <input type="color" name="zia_color" placeholder="Enter a color" id="ZiaColorField" value="#BF0A30">
-                    <button id="ZiaColorButton">Apply</button>
-                </div>
-            </form>
-            <script>
-    const backgroundColorBtn = document.getElementById('BackgroundColorButton');
-    const ziaColorBtn = document.getElementById('ZiaColorButton');
-    const content1 = document.querySelector('.zia-background');
-    const content2 = document.querySelector('.ring-center');
-    const colorField = document.getElementById('BackgroundColorField');
-    const contentZia = document.querySelectorAll('.zia-color');
-    const ziaColorField = document.getElementById('ZiaColorField');
-      
-    backgroundColorBtn.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent form submission
-      const colorValue = colorField.value.trim();
-      content1.style.backgroundColor = colorValue; 
-      content2.style.borderColor = colorValue;
-    });
-    
-    ziaColorBtn.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent form submission
-      const colorValueZia = ziaColorField.value.trim();
-      for (let i = 0; i < contentZia.length; i++) {
-        contentZia[i].style.borderColor = colorValueZia;
-      }
-    });
-  </script>
-	</body>
-  </html>
+        </div>
+        <div id="selections">
+            <label for="BackgroundColorField" id="BackgroundColorWords">Background Color:</label> 
+            <input type="color" name="background_color" placeholder="Enter a color" id="BackgroundColorField" value="#FFD700">
+            <button id="BackgroundColorButton">Apply</button><br><br>
+            <label for="ZiaColorField" id="ZiaColorWords">Zia Symbol Color:</label> 
+            <input type="color" name="zia_color" placeholder="Enter a color" id="ZiaColorField" value="#BF0A30">
+            <button id="ZiaColorButton">Apply</button>
+        </div>
+        <script>
+            let backgroundColorBtn = document.getElementById('BackgroundColorButton');
+            let ziaColorBtn = document.getElementById('ZiaColorButton');
+            let ziaBackground = document.querySelector('.zia-background');
+            let ringCenter = document.querySelector('.ring-center');
+            let colorField = document.getElementById('BackgroundColorField');
+            let contentZia = document.querySelectorAll('.zia-color');
+            let ziaColorField = document.getElementById('ZiaColorField');
   
+            backgroundColorBtn.addEventListener('click', function() 
+            {
+              let colorValue = colorField.value.trim();
+              ziaBackground.style.backgroundColor = colorValue; 
+              ringCenter.style.borderColor = colorValue;
+            });
+  
+            ziaColorBtn.addEventListener('click', function() 
+            {
+              let colorValueZia = ziaColorField.value.trim();
+              for (let i = 0; i < contentZia.length; i++) {
+                contentZia[i].style.borderColor = colorValueZia;
+              }
+            });
+        </script>
+        <footer>Copyright &copy; 2023 Andrew Yturaldi</footer>
+      </div>
+  </body>
+</html>
