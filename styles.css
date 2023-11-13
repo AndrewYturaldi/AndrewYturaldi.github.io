@@ -1,10 +1,13 @@
 * {
-    font-family: monospace;
+   font-family: Arial, Helvetica;
 }
 
 body {
     background-color: lightcyan;
-    overflow-y: auto;
+}
+
+#wrapper {
+    display: block;
 }
 
 h1 {
@@ -18,23 +21,23 @@ h1 {
 .zia-background {
 	width: 600px;
 	height: 400px;
+    margin: auto;
 	background-color: #FFD700;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid black;
+    border: 2px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #zia-ring {
+    position: absolute;
     width: 60px;
     height: 60px;
     border: 6px solid #BF0A30;
     border-radius: 50%;
-    top: 50%;
+    top: 40.5%;
+    left: 44%;
 }
 
 #zia-top-line-one {
@@ -49,7 +52,7 @@ h1 {
 #zia-top-line-two {
     position: absolute;
     top: 26%;
-    left: 48.2%;
+    left: 48.3%;
     border-left: 7px solid #BF0A30;
     border-radius: 10px;
     height: 68px;
@@ -58,7 +61,7 @@ h1 {
 #zia-top-line-three {
     position: absolute;
     top: 26%;
-    left: 50.4%;
+    left: 50.6%;
     border-left: 7px solid #BF0A30;
     border-radius: 10px;
     height: 68px;
@@ -67,7 +70,7 @@ h1 {
 #zia-top-line-four {
     position: absolute;
     top: 30%;
-    left: 52.6%;
+    left: 52.9%;
     border-left: 7px solid #BF0A30;
     border-radius: 10px;
     height: 58px;
@@ -75,7 +78,7 @@ h1 {
 
 #zia-bottom-line-one {
     position: absolute;
-    top: 55.6%;
+    top: 54.6%;
     left: 46%;
     border-left: 7px solid #BF0A30;
     border-radius: 10px;
@@ -84,8 +87,8 @@ h1 {
 
 #zia-bottom-line-two {
     position: absolute;
-    top: 57%;
-    left: 48.2%;
+    top: 56%;
+    left: 48.3%;
     border-left: 7px solid #BF0A30;
     border-radius: 10px;
     height: 68px;
@@ -93,8 +96,8 @@ h1 {
 
 #zia-bottom-line-three {
     position: absolute;
-    top: 57%;
-    left: 50.4%;
+    top: 56%;
+    left: 50.6%;
     border-left: 7px solid #BF0A30;
     border-radius: 10px;
     height: 68px;
@@ -102,8 +105,8 @@ h1 {
 
 #zia-bottom-line-four {
     position: absolute;
-    top: 55.6%;
-    left: 52.6%;
+    top: 54.6%;
+    left: 52.9%;
     border-left: 7px solid #BF0A30;
     border-radius: 10px;
     height: 58px;
@@ -111,7 +114,7 @@ h1 {
 
 #zia-left-line-one {
     position: absolute;
-    top: 54%;
+    top: 53.6%;
     left: 36.65%;
     border-top: 7px solid #BF0A30;
     border-radius: 10px;
@@ -121,7 +124,7 @@ h1 {
 
 #zia-left-line-two {
     position: absolute;
-    top: 50.8%;
+    top: 50.3%;
     left: 34%;
     border-top: 7px solid #BF0A30;
     border-radius: 10px;
@@ -130,7 +133,7 @@ h1 {
 
 #zia-left-line-three {
     position: absolute;
-    top: 47.3%;
+    top: 47%;
     left: 34%;
     border-top: 7px solid #BF0A30;
     border-radius: 10px;
@@ -139,7 +142,7 @@ h1 {
 
 #zia-left-line-four {
     position: absolute;
-    top: 44%;
+    top: 43.7%;
     left: 36.65%;
     border-top: 7px solid #BF0A30;
     border-radius: 10px;
@@ -148,8 +151,8 @@ h1 {
 
 #zia-right-line-one {
     position: absolute;
-    top: 54%;
-    left: 53.75%;
+    top: 53.6%;
+    left: 53.6%;
     border-top: 7px solid #BF0A30;
     border-radius: 10px;
     width: 58px;
@@ -158,8 +161,8 @@ h1 {
 
 #zia-right-line-two {
     position: absolute;
-    top: 50.8%;
-    left: 54.7%;
+    top: 50.3%;
+    left: 54.65%;
     border-top: 7px solid #BF0A30;
     border-radius: 10px;
     width: 68px;
@@ -167,8 +170,8 @@ h1 {
 
 #zia-right-line-three {
     position: absolute;
-    top: 47.3%;
-    left: 54.7%;
+    top: 47%;
+    left: 54.65%;
     border-top: 7px solid #BF0A30;
     border-radius: 10px;
     width: 68px;
@@ -176,68 +179,53 @@ h1 {
 
 #zia-right-line-four {
     position: absolute;
-    top: 44%;
-    left: 53.75%;
+    top: 43.7%;
+    left: 53.6%;
     border-top: 7px solid #BF0A30;
     border-radius: 10px;
     width: 58px;
 }
 
 .ring-center {
+    position: absolute;
+    top: 42%;
+    left: 45%;
     width: 40px;
     height: 40px;
     border: 10px solid #FFD700;
     border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#BackgroundColorButton {
-    margin-right: 20px;
 }
 
 #ZiaColorButton, #BackgroundColorButton {
-    width: 20%;
-    height: 5%;
+    width: 50%;
+    height: 50px;
     font-size: 100%;
-    font-style: bold;
-    background-color: mediumturquoise
+    text-decoration: bold;
+    background-color: mediumturquoise;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #ZiaColorButton:active, #BackgroundColorButton:active {
     background-color: orange;
 }
 
-#BackgroundColorWords, #ZiaColorWords {
-   white-space: nowrap;
+#selections {
+    margin-top: 500px;
+    display: block;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#BackgroundColorDiv,
-#ZiaColorDiv {
-  width: 600px;
-  margin-top: 20px;
+#selections input {
+    width: 50px;
+    height: 50px;
 }
 
-form {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 88%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-
+footer {
+    margin-top: 40px;
+    margin-bottom: 25px;
+    text-align: center;
 }
-
-
-
-
-
-
-
-
-
