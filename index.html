@@ -39,6 +39,7 @@
             <label for="ZiaColorField" id="ZiaColorWords">Zia Symbol Color:</label> 
             <input type="color" name="zia_color" placeholder="Enter a color" id="ZiaColorField" value="#BF0A30">
             <button id="ZiaColorButton">Apply</button>
+            <button id="SwapColorsButton">Swap Colors</button>
         </div>
         <script>
             let backgroundColorBtn = document.getElementById('BackgroundColorButton');
@@ -48,21 +49,45 @@
             let colorField = document.getElementById('BackgroundColorField');
             let contentZia = document.querySelectorAll('.zia-color');
             let ziaColorField = document.getElementById('ZiaColorField');
-  
-            backgroundColorBtn.addEventListener('click', function() 
-            {
+            let swapColorsBtn = document.getElementById('SwapColorsButton');
+            let bool = true;
+
+            function backgroundColor() {
               let colorValue = colorField.value.trim();
               ziaBackground.style.backgroundColor = colorValue; 
-              ringCenter.style.borderColor = colorValue;
-            });
-  
-            ziaColorBtn.addEventListener('click', function() 
-            {
+              ringCenter.style.borderColor = colorValue; 
+              bool = true;
+            }
+
+            function ziaColor() {
               let colorValueZia = ziaColorField.value.trim();
               for (let i = 0; i < contentZia.length; i++) {
                 contentZia[i].style.borderColor = colorValueZia;
               }
-            });
+              bool = true;
+            }
+  
+            backgroundColorBtn.addEventListener('click', backgroundColor);
+  
+            ziaColorBtn.addEventListener('click', ziaColor);
+
+            swapColorsBtn.addEventListener('click', function() {
+              if(bool){
+                let colorValue = colorField.value.trim();
+                let colorValueZia = ziaColorField.value.trim();
+                ziaBackground.style.backgroundColor = colorValueZia; 
+                ringCenter.style.borderColor = colorValueZia;
+                for (let i = 0; i < contentZia.length; i++) {
+                  contentZia[i].style.borderColor = colorValue;
+                }
+                bool = false;
+              }
+              else {
+                backgroundColor();
+                ziaColor();
+                bool = true;
+              }
+            })
         </script>
         <footer>Copyright &copy; 2023 Andrew Yturaldi</footer>
       </div>
