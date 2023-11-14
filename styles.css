@@ -181,7 +181,7 @@ h1 {
     border-radius: 50%;
 }
 
-#ZiaColorButton, #BackgroundColorButton {
+#ZiaColorButton, #BackgroundColorButton, #SwapColorsButton {
     width: 300px;
     height: 50px;
     font-size: 100%;
@@ -193,7 +193,8 @@ h1 {
     margin-right: auto;
 }
 
-#ZiaColorButton:active, #BackgroundColorButton:active {
+#ZiaColorButton:active, #BackgroundColorButton:active, 
+#SwapColorsButton:active {
     background-color: orange;
 }
 
@@ -213,6 +214,11 @@ h1 {
 
 #selections label {
     margin-right: 10px;
+}
+
+#SwapColorsButton {
+    margin-top: 45px;
+    width: 500px;
 }
 
 footer {
