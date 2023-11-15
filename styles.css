@@ -239,7 +239,7 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width: 618px) {
+@media screen and (max-width: 718px) {
     .zia-background {
         transform: scale(0.9);
     }
@@ -254,7 +254,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     #SwapColorsButton, #ColorButton {
         height: 90px;
         font-size: 200%;
