@@ -3,8 +3,9 @@
     <head>
 	  <title>Zia Customizer</title>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=0.8">
+      <meta name="viewport" content="width=device-width, initial-scale=0.8, min-scale=1.0, max-scale=1.0">
       <link href='https://fonts.googleapis.com/css?family=Texturina' rel='stylesheet'>
+      <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
       <link rel="stylesheet" href="styles.css"/>
       <link rel="icon" href="zia_favicon.jpg">
 	</head>  
@@ -34,17 +35,23 @@
           <div class="ring-center absolute"></div>
         </div>
         <div id="selections">
-            <label for="BackgroundColorField" id="BackgroundColorWords">Background Color:</label>
-            <input type="color" name="background_color" placeholder="Enter a color" id="BackgroundColorField" value="#FFD700">
-            <button id="BackgroundColorButton">Apply</button><br><br>
-            <label for="ZiaColorField" id="ZiaColorWords">Zia Symbol Color:</label> 
-            <input type="color" name="zia_color" placeholder="Enter a color" id="ZiaColorField" value="#BF0A30">
-            <button id="ZiaColorButton">Apply</button>
+            <div id="colors-div">
+              <div id="background-color">
+                <label for="BackgroundColorField" id="BackgroundColorWords">Background Color:</label>
+                <input type="color" name="background_color" placeholder="Enter a color" id="BackgroundColorField" value="#FFD700">
+              </div>
+              <div>
+                <label for="ZiaColorField" id="ZiaColorWords">Zia Symbol Color:</label> 
+                <input type="color" name="zia_color" placeholder="Enter a color" id="ZiaColorField" value="#BF0A30">
+              </div>
+            </div>
+            <div id="buttons-div">
+              <button id="ColorButton">Apply</button><br><br>
             <button id="SwapColorsButton">Swap Colors</button>
+            </div>
         </div>
         <script>
-            let backgroundColorBtn = document.getElementById('BackgroundColorButton');
-            let ziaColorBtn = document.getElementById('ZiaColorButton');
+            let ColorBtn = document.getElementById('ColorButton');
             let ziaBackground = document.querySelector('.zia-background');
             let ringCenter = document.querySelector('.ring-center');
             let colorField = document.getElementById('BackgroundColorField');
@@ -53,24 +60,18 @@
             let swapColorsBtn = document.getElementById('SwapColorsButton');
             let bool = true;
 
-            function backgroundColor() {
+            function setColors() {
               let colorValue = colorField.value.trim();
               ziaBackground.style.backgroundColor = colorValue; 
               ringCenter.style.borderColor = colorValue; 
-              bool = true;
-            }
-
-            function ziaColor() {
               let colorValueZia = ziaColorField.value.trim();
               for (let i = 0; i < contentZia.length; i++) {
                 contentZia[i].style.borderColor = colorValueZia;
               }
               bool = true;
             }
-  
-            backgroundColorBtn.addEventListener('click', backgroundColor);
-  
-            ziaColorBtn.addEventListener('click', ziaColor);
+
+            ColorBtn.addEventListener('click', setColors);
 
             swapColorsBtn.addEventListener('click', function() {
               if(bool){
@@ -84,8 +85,7 @@
                 bool = false;
               }
               else {
-                backgroundColor();
-                ziaColor();
+                setColors();
                 bool = true;
               }
             })
