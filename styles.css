@@ -283,3 +283,7 @@ footer {
         font-size: medium;
     }
 }
+
+@font-face {
+	url('papyrus.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
