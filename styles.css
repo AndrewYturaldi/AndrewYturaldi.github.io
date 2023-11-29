@@ -17,7 +17,7 @@ body {
 
 h1 {
     text-align: center;
-    font-family: papyrus, Texturina, Georgia;
+    font-family: myPapyrus, papyrus, Texturina, Georgia;
     font-style: bold;
     font-size: 300%;
 }
@@ -285,5 +285,6 @@ footer {
 }
 
 @font-face {
-	url('papyrus.ttf')  format('truetype'), /* Safari, Android, iOS */
+	font-family: 'myPapyrus';
+	src: url('papyrus.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
