@@ -244,10 +244,6 @@ footer {
         transform: scale(0.9);
     }
 
-    body, #wrapper {
-        width: 620px;
-    }
-
     h1 {
         font-size: 350%;
         margin-bottom: 5px;
