@@ -258,7 +258,6 @@ footer {
     #SwapColorsButton, #ColorButton {
         height: 90px;
         font-size: 200%;
-        border-radius: 50px;
     }
 
     #selections label {
