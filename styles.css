@@ -9,6 +9,10 @@ body {
     margin-right: 0;
 }
 
+.point:hover {
+    cursor: pointer;
+}
+
 #wrapper {
     display: block;
     width: 620px;
