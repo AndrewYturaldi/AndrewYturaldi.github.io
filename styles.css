@@ -1,289 +1,139 @@
 * {
-   font-family: Poppins, Arial, Helvetica;
-   color: #000;
-}
-
-body {
-    background-color: lightcyan;
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.point:hover {
-    cursor: pointer;
-}
-
-#wrapper {
-    display: block;
-    width: 620px;
-    margin: auto;
-}
-
-h1 {
-    text-align: center;
-    font-family: 'myPapyrus', papyrus, Texturina, Georgia;
-    font-style: bold;
-    font-size: 300%;
-}
-
-.zia-background {
-	width: 600px;
-	height: 400px;
-    margin: auto;
-	background-color: #FFD700;
-    border: 2px solid black;
-    position: relative;
-}
-
-.absolute {
-    position: absolute;
-}
-
-#zia-ring {
-    width: 60px;
-    height: 60px;
-    border: 6px solid #BF0A30;
-    border-radius: 50%;
-    top: 40.5%;
-    left: 44%;
-}
-
-#zia-top-line-one {
-    top: 30%;
-    left: 46%;
-    border-left: 7px solid #BF0A30;
-    border-radius: 10px;
-    height: 58px;
-}
-
-#zia-top-line-two {
-    top: 26%;
-    left: 48.3%;
-    border-left: 7px solid #BF0A30;
-    border-radius: 10px;
-    height: 68px;
-}
-
-#zia-top-line-three {
-    top: 26%;
-    left: 50.6%;
-    border-left: 7px solid #BF0A30;
-    border-radius: 10px;
-    height: 68px;
-}
-
-#zia-top-line-four {
-    top: 30%;
-    left: 52.9%;
-    border-left: 7px solid #BF0A30;
-    border-radius: 10px;
-    height: 58px;
-}
-
-#zia-bottom-line-one {
-    top: 54.6%;
-    left: 46%;
-    border-left: 7px solid #BF0A30;
-    border-radius: 10px;
-    height: 58px;
-}
-
-#zia-bottom-line-two {
-    top: 56%;
-    left: 48.3%;
-    border-left: 7px solid #BF0A30;
-    border-radius: 10px;
-    height: 68px;
-}
-
-#zia-bottom-line-three {
-    top: 56%;
-    left: 50.6%;
-    border-left: 7px solid #BF0A30;
-    border-radius: 10px;
-    height: 68px;
-}
-
-#zia-bottom-line-four {
-    top: 54.6%;
-    left: 52.9%;
-    border-left: 7px solid #BF0A30;
-    border-radius: 10px;
-    height: 58px;
-}
-
-#zia-left-line-one {
-    top: 53.6%;
-    left: 36.65%;
-    border-top: 7px solid #BF0A30;
-    border-radius: 10px;
-    width: 58px;
-}
-
-
-#zia-left-line-two {
-    top: 50.3%;
-    left: 34%;
-    border-top: 7px solid #BF0A30;
-    border-radius: 10px;
-    width: 68px;
-}
-
-#zia-left-line-three {
-    top: 47%;
-    left: 34%;
-    border-top: 7px solid #BF0A30;
-    border-radius: 10px;
-    width: 68px;
-}
-
-#zia-left-line-four {
-    top: 43.7%;
-    left: 36.65%;
-    border-top: 7px solid #BF0A30;
-    border-radius: 10px;
-    width: 58px;
-}
-
-#zia-right-line-one {
-    top: 53.6%;
-    left: 53.6%;
-    border-top: 7px solid #BF0A30;
-    border-radius: 10px;
-    width: 58px;
-}
-
-
-#zia-right-line-two {
-    top: 50.3%;
-    left: 54.65%;
-    border-top: 7px solid #BF0A30;
-    border-radius: 10px;
-    width: 68px;
-}
-
-#zia-right-line-three {
-    top: 47%;
-    left: 54.65%;
-    border-top: 7px solid #BF0A30;
-    border-radius: 10px;
-    width: 68px;
-}
-
-#zia-right-line-four {
-    top: 43.7%;
-    left: 53.6%;
-    border-top: 7px solid #BF0A30;
-    border-radius: 10px;
-    width: 58px;
-}
-
-.ring-center {
-    top: 42%;
-    left: 45%;
-    width: 40px;
-    height: 40px;
-    border: 10px solid #FFD700;
-    border-radius: 50%;
-}
-
-#ColorButton, #SwapColorsButton {
-    width: 500px;
-    height: 75px;
-    font-size: 145%;
-    font-weight: bold;
-    background-color: mediumturquoise;
-    border: 2px solid #000;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-}
-
-#ColorButton:active, #SwapColorsButton:active {
-    background-color: orange;
-}
-
-#selections {
-    text-align: center;
-    margin-top: 45px;
-    width: 100%;
-}
-
-#selections input {
-    position: relative;
-    top: 15px;
-    width: 50px;
-    height: 50px;
-    margin-right: 5px;
-    border-radius: 5px;
-}
-
-
-#selections label {
-    font-size: 120%;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-#colors-div {
-    width: 540px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right:auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-footer {
-    font-size: small;
-    margin-top: 40px;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-@media screen and (max-width: 718px) {
-    .zia-background {
-        transform: scale(0.9);
-    }
-
-    h1 {
-        font-size: 350%;
-        margin-bottom: 5px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    #SwapColorsButton, #ColorButton {
-        height: 90px;
-        font-size: 200%;
-    }
-
-    #selections label {
-        font-size: 200%;
-    }
-
-    #selections input {
-        width: 75px;
-        height: 75px;
-    }
-
-    #colors-div {
-        flex-direction: column;
-    }
-
-    #background-color {
-        margin-bottom: 30px;
-    }
-
-    footer {
-        margin-top: 80px;
-        font-size: medium;
-    }
-}
-
-@font-face {
-	font-family: 'myPapyrus';
-	src: url('papyrus.ttf')  format('truetype'); /* Safari, Android, iOS */
-}
+    font-family: Poppins, Arial, Helvetica;
+    color: #000;
+ }
+ 
+ body {
+     background-color: lightcyan;
+     margin-left: 0;
+     margin-right: 0;
+ }
+ 
+ #wrapper {
+     display: block;
+     width: 620px;
+     margin: auto;
+ }
+ 
+ h1 {
+     text-align: center;
+     font-family: 'myPapyrus', papyrus, Texturina, Georgia;
+     font-style: bold;
+     font-size: 300%;
+ }
+ 
+ .zia-background {
+     width: 600px;
+     height: 400px;
+     margin: auto;
+     background-color: #FFD700;
+     border: 2px solid black;
+     position: relative;
+ }
+ 
+ #zia-color {
+    position: absolute; 
+    top: 23%;
+    left: 32.5%;
+ }
+ 
+ #ColorButton, #SwapColorsButton {
+     width: 500px;
+     height: 75px;
+     font-size: 145%;
+     font-weight: bold;
+     background-color: mediumturquoise;
+     border: 2px solid #000;
+     border-radius: 10px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 20px;
+ }
+ 
+ #ColorButton:active, #SwapColorsButton:active {
+     background-color: orange;
+ }
+ 
+ #selections {
+     text-align: center;
+     margin-top: 45px;
+     width: 100%;
+ }
+ 
+ #selections input {
+     position: relative;
+     top: 15px;
+     width: 50px;
+     height: 50px;
+     margin-right: 5px;
+     border-radius: 5px;
+ }
+ 
+ 
+ #selections label {
+     font-size: 120%;
+     margin-right: 10px;
+     margin-left: 10px;
+ }
+ 
+ #colors-div {
+     width: 540px;
+     margin-bottom: 20px;
+     margin-left: auto;
+     margin-right:auto;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+ }
+ 
+ footer {
+     font-size: small;
+     margin-top: 40px;
+     margin-bottom: 25px;
+     text-align: center;
+ }
+ 
+ @media screen and (max-width: 718px) {
+     .zia-background {
+         transform: scale(0.9);
+     }
+ 
+     h1 {
+         font-size: 350%;
+         margin-bottom: 5px;
+     }
+ }
+ 
+ @media screen and (max-width: 600px) {
+     #SwapColorsButton, #ColorButton {
+         height: 90px;
+         font-size: 200%;
+     }
+ 
+     #selections label {
+         font-size: 200%;
+     }
+ 
+     #selections input {
+         width: 75px;
+         height: 75px;
+     }
+ 
+     #colors-div {
+         flex-direction: column;
+     }
+ 
+     #background-color {
+         margin-bottom: 30px;
+     }
+ 
+     footer {
+         margin-top: 80px;
+         font-size: medium;
+     }
+ }
+ 
+ @font-face {
+     font-family: 'myPapyrus';
+     src: url('papyrus.ttf')  format('truetype'); /* Safari, Android, iOS */
+ }
