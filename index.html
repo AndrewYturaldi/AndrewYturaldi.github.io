@@ -7,7 +7,7 @@
       <link href='https://fonts.googleapis.com/css?family=Texturina' rel='stylesheet'>
       <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
       <link rel="stylesheet" href="styles.css"/>
-      <link rel="icon" href="zia_favicon.jpg">
+      <link rel="icon" href="zia_favicon.png">
     </head>  
     <body>
       <div id="wrapper">
@@ -15,24 +15,9 @@
           <h1>Zia Customizer</h1>
         </header> 
         <div class="zia-background">
-          <div id="zia-ring" class="zia-color absolute"></div>
-          <div id="zia-top-line-one" class="zia-color absolute"></div>
-          <div id="zia-top-line-two" class="zia-color absolute"></div>
-          <div id="zia-top-line-three" class="zia-color absolute"></div>
-          <div id="zia-top-line-four" class="zia-color absolute"></div>
-          <div id="zia-bottom-line-one" class="zia-color absolute"></div>
-          <div id="zia-bottom-line-two" class="zia-color absolute"></div>
-          <div id="zia-bottom-line-three" class="zia-color absolute"></div>
-          <div id="zia-bottom-line-four" class="zia-color absolute"></div>
-          <div id="zia-left-line-one" class="zia-color absolute"></div>
-          <div id="zia-left-line-two" class="zia-color absolute"></div>
-          <div id="zia-left-line-three" class="zia-color absolute"></div>
-          <div id="zia-left-line-four" class="zia-color absolute"></div>
-          <div id="zia-right-line-one" class="zia-color absolute"></div>
-          <div id="zia-right-line-two" class="zia-color absolute"></div>
-          <div id="zia-right-line-three" class="zia-color absolute"></div>
-          <div id="zia-right-line-four" class="zia-color absolute"></div>
-          <div class="ring-center absolute"></div>
+          <!--ZIA SYMBOL SVG-->
+          <object  id='zia-color' type="image/svg+xml" data="zia_symbol_image.svg" width="210" height="210"></object>
+        </div>
         </div>
         <div id="selections">
             <div id="colors-div">
@@ -53,20 +38,21 @@
         <script>
             let ColorBtn = document.getElementById('ColorButton');
             let ziaBackground = document.querySelector('.zia-background');
-            let ringCenter = document.querySelector('.ring-center');
             let colorField = document.getElementById('BackgroundColorField');
-            let contentZia = document.querySelectorAll('.zia-color');
+            let contentZia = document.getElementById('zia-color');
             let ziaColorField = document.getElementById('ZiaColorField');
             let swapColorsBtn = document.getElementById('SwapColorsButton');
             let bool = true;
 
             function setColors() {
+              let svgDoc = contentZia.contentDocument;
+              let pathElement = svgDoc.querySelector('path');
               let colorValue = colorField.value.trim();
-              ziaBackground.style.backgroundColor = colorValue; 
-              ringCenter.style.borderColor = colorValue; 
               let colorValueZia = ziaColorField.value.trim();
-              for (let i = 0; i < contentZia.length; i++) {
-                contentZia[i].style.borderColor = colorValueZia;
+
+              ziaBackground.style.backgroundColor = colorValue; 
+              if(pathElement){
+                pathElement.style.fill = colorValueZia;
               }
               bool = true;
             }
@@ -75,12 +61,14 @@
 
             swapColorsBtn.addEventListener('click', function() {
               if(bool){
+                let svgDoc = contentZia.contentDocument;
+                let pathElement = svgDoc.querySelector('path');
                 let colorValue = colorField.value.trim();
                 let colorValueZia = ziaColorField.value.trim();
+
                 ziaBackground.style.backgroundColor = colorValueZia; 
-                ringCenter.style.borderColor = colorValueZia;
-                for (let i = 0; i < contentZia.length; i++) {
-                  contentZia[i].style.borderColor = colorValue;
+                if(pathElement){
+                  pathElement.style.fill = colorValue;
                 }
                 bool = false;
               }
